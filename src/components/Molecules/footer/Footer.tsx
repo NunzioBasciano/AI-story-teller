@@ -1,6 +1,6 @@
 import { labels } from '@/data/labels'
 import style from './footer.module.css'
-import Image from 'next/image'
+
 
 const footerLinks = [
     {
