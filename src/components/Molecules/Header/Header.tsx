@@ -4,12 +4,16 @@ import { labels } from '@/data/labels';
 import Link from 'next/link';
 import { MenuNavigation } from '@/data/menuNavigation';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 interface IHeaderProps {
     title: string;
 }
 
+
 function Header(props: IHeaderProps) {
+    const router = useRouter();
+    const currentPath = router.pathname;
     const { title } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -27,7 +31,7 @@ function Header(props: IHeaderProps) {
                     {MenuNavigation.map((item) => (
                         <li
                             key={item.label}
-                            className={style.link}
+                            className={`${style.link} ${currentPath === item.path ? style.active : ''}`}
                         >
                             <Link
                                 href={item.path}>

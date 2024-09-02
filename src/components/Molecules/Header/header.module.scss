@@ -27,10 +27,11 @@
     }
 }
 
-/* .link:hover {
-    transform: scale(1.2);
+.active {
+    color: var(--dark-orange);
+    font-weight: 600;
 }
- */
+
 .button_hamburger_container {
     display: flex;
     align-items: center;
