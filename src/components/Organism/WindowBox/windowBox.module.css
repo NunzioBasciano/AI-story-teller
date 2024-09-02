@@ -1,0 +1,13 @@
+.container {
+    border: solid 1px var(--dark-green);
+    box-shadow: var(--dark-green) 0px 3px 5px;
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.title {
+    color: var(--dark-green);
+    font-size: 1rem;
+}

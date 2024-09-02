@@ -1,0 +1,34 @@
+.container {
+    background-color: var(--light-green);
+    color: var(--dark-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_icons {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.container_icon {
+    width: 3rem;
+}
+
+.icon {
+    background-color: var(--light-green);
+    border-radius: 50%;
+    width: 100%;
+    box-shadow: var(--dark-green) 0px 5px 15px;
+}
+
+.copyright {
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+
+}

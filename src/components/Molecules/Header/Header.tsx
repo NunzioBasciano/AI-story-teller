@@ -1,8 +1,21 @@
 import style from './header.module.css'
+import Button from '@/components/Atom/Button/Button';
+import { labels } from '@/data/labels';
 
-function Header() {
+interface IHeaderProps {
+    title: string;
+}
+
+function Header(props: IHeaderProps) {
+    const { title } = props
     return (
-        <div className={style.container}>Header</div>
+        <header className={style.container}>
+            <h1>{title}</h1>
+            <Button
+                label={labels.loginButtonLabel}
+
+            />
+        </header>
     )
 }
 
