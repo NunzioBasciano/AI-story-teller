@@ -31,7 +31,7 @@ function Header(props: IHeaderProps) {
                     {MenuNavigation.map((item) => (
                         <li
                             key={item.label}
-                            className={`${style.link} ${currentPath === item.path ? style.active : ''}`}
+                            className={`${style.link} ${currentPath === item.path && style.active}`}
                         >
                             <Link
                                 href={item.path}>
