@@ -5,6 +5,7 @@
     padding: 1rem;
     max-width: 900px;
     width: 100%;
+    min-height: 90dvh;
 }
 
 .title {
