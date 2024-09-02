@@ -2,6 +2,9 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Molecules/Header/Header";
+import { labels } from '../data/labels'
+import WindowBox from "../components/Organism/WindowBox/WindowBox";
+import Footer from '../components/Molecules/footer/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +18,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Header />
+        <Header
+          title={labels.titlePageLabel}
+        />
+        <div className={styles.content}>
+          <WindowBox
+            title={'Ciao sono io'}
+          />
+        </div>
+        <Footer />
+
       </main>
     </>
   );
