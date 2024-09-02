@@ -1,4 +1,4 @@
-import style from './windowBox.module.css'
+import style from './windowBox.module.scss'
 
 interface IWindowBoxProps {
     title?: string;

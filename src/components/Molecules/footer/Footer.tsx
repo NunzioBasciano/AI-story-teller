@@ -1,5 +1,5 @@
 import { labels } from '@/data/labels'
-import style from './footer.module.css'
+import style from './footer.module.scss'
 
 
 const footerLinks = [
@@ -10,7 +10,7 @@ const footerLinks = [
     },
     {
         href: 'https://www.linkedin.com/in/nunzio-basciano/',
-        src: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png',
+        src: '/linkedin.png',
         alt: labels.linkedinIconAlt,
     }
 ];

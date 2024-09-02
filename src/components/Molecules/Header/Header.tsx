@@ -1,4 +1,4 @@
-import style from './header.module.css'
+import style from './header.module.scss'
 import Button from '@/components/Atom/Button/Button';
 import { labels } from '@/data/labels';
 import Link from 'next/link';

@@ -21,12 +21,16 @@
     font-size: 14px;
     font-weight: 600;
     transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
-.link:hover {
+/* .link:hover {
     transform: scale(1.2);
 }
-
+ */
 .button_hamburger_container {
     display: flex;
     align-items: center;
