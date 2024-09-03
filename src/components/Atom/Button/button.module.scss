@@ -1,9 +1,7 @@
 .button {
-    background-color: var(--dark-green);
     border: none;
     border-radius: 0.5rem;
-    color: var(--light-orange);
-    padding: 0.5rem 1rem;
+    padding: 0.57rem 1rem;
     cursor: pointer;
     transition: all 0.35s ease;
 
@@ -11,4 +9,7 @@
         background-color: var(--dark-orange);
         color: var(--primary-color);
     }
+
+    @include backgroundAndColor-style(var(--dark-green), var(--light-orange));
+
 }

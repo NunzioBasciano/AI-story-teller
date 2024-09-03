@@ -11,7 +11,20 @@ export const labels = {
     contactsLabel: 'Contacts',
     information: 'Information',
 
+    /* WindowBox */
+    storyParamsLabel: 'Story Params',
 
+
+    /* InputBox */
+    protagonistLabel: "Protagonist's name",
+    setProtagonistLabel: "Insert protagonist's name",
+
+    antagonistLabel: "Antagonist's name",
+    setAntagonistLabelLabel: "Insert antagonist's name",
+
+    genresLabel: 'Genres',
+
+    buttonParamsLabel: 'Generate',
 
 
     /* Footer */

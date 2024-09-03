@@ -8,3 +8,15 @@
 .content {
     padding: 1rem 0.5rem;
 }
+
+.input_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container_button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 1rem;
+}

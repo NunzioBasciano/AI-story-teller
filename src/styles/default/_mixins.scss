@@ -1,0 +1,15 @@
+@mixin flexCenter-style () {
+    display: flex;
+    align-items: center;
+}
+
+@mixin backgroundAndColor-style ($color1, $color2) {
+    background-color: $color1;
+    color: $color2;
+}
+
+@mixin paddingRadius-style ($p1, $p2, $radius, $color ) {
+    padding: $p1 $p2;
+    border-radius: $radius;
+    border: 1px solid $color;
+}
