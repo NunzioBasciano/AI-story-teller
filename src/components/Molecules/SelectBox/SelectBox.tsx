@@ -21,10 +21,10 @@ function SelectBox(props: ISelectBoxProps) {
             <Label
                 label={label}
             />
-            <select name="select" onChange={handleChange}>
+            <select className={style.select} name="select" onChange={handleChange}>
                 {list.map((item) => {
                     return (
-                        <option key={item.value} value={item.value}>{item.label}</option>
+                        <option className={style.option} key={item.value} value={item.value}>{item.label}</option>
                     )
                 })}
             </select>

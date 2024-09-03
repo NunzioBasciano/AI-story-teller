@@ -1,0 +1,16 @@
+.container {
+    margin: 1rem;
+}
+
+.select {
+    @include paddingRadius-style(0.45rem, 3rem, 0.5rem, (var(--dark-green)));
+    @include backgroundAndColor-style((var(--light-orange)), (var(--dark-green)));
+}
+
+.option {
+    padding: 1rem;
+
+    &:hover {
+        @include backgroundAndColor-style((var(--light-green)), (var(--dark-orange)));
+    }
+}

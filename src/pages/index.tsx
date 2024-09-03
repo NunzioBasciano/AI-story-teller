@@ -5,18 +5,19 @@ import { labels } from '../data/labels'
 import WindowBox from "../components/Organism/WindowBox/WindowBox";
 import Footer from '../components/Molecules/Footer/Footer';
 import InputBox from '../components/Molecules/InputBox/InputBox';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
 import { optionSelect } from "@/data/optionSelect";
+import Button from "@/components/Atom/Button/Button";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
   const [antagonist, setAntagonists] = useState('');
   const [genre, setGenre] = useState('');
 
-  useEffect(() => {
-    console.log(antagonist, protagonist)
-  }, []);
+  const handleGenerate = () => {
+    console.log({ protagonist, antagonist, genre })
+  }
 
   return (
     <>
@@ -31,25 +32,34 @@ export default function Home() {
           title={labels.titlePageLabel}
         />
         <div className={styles.content}>
-          <WindowBox >
-            <InputBox
-              label={labels.protagonistLabel}
-              placeholder={labels.setProtagonistLabel}
-              setValue={setProtagonist}
-              value={protagonist}
-            />
-            <InputBox
-              label={labels.antagonistLabel}
-              placeholder={labels.setAntagonistLabelLabel}
-              setValue={setAntagonists}
-              value={antagonist}
-            />
-            <SelectBox
-              label={labels.genresLabel}
-              list={optionSelect}
-              setAction={setGenre}
-            />
-
+          <WindowBox
+            title={labels.storyParamsLabel}
+          >
+            <div className={styles.input_container}>
+              <InputBox
+                label={labels.protagonistLabel}
+                placeholder={labels.setProtagonistLabel}
+                setValue={setProtagonist}
+                value={protagonist}
+              />
+              <InputBox
+                label={labels.antagonistLabel}
+                placeholder={labels.setAntagonistLabelLabel}
+                setValue={setAntagonists}
+                value={antagonist}
+              />
+              <SelectBox
+                label={labels.genresLabel}
+                list={optionSelect}
+                setAction={setGenre}
+              />
+              <div className={styles.container_button}>
+                <Button
+                  label={labels.buttonParamsLabel}
+                  onClick={handleGenerate}
+                />
+              </div>
+            </div>
           </WindowBox>
         </div>
         <Footer />

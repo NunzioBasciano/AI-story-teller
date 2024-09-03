@@ -1,5 +1,3 @@
 .input {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--dark-green);
+    @include paddingRadius-style(0.5rem, 1rem, 0.5rem, (var(--dark-green)));
 }
