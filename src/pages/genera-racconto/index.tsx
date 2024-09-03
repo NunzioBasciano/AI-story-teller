@@ -1,6 +1,6 @@
 import { labels } from "@/data/labels";
 import Head from "next/head";
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Home.module.scss';
 import Header from "@/components/Molecules/Header/Header";
 import WindowBox from "@/components/Organism/WindowBox/WindowBox";
 import Footer from "@/components/Molecules/footer/Footer";

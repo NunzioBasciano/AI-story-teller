@@ -1,3 +1,5 @@
+'use client'
+
 import style from './header.module.scss'
 import Button from '@/components/Atom/Button/Button';
 import { labels } from '@/data/labels';
@@ -25,7 +27,9 @@ function Header(props: IHeaderProps) {
     }, [isMenuOpen])
     return (
         <header className={style.container}>
-            <h1>{title}</h1>
+            <Link href={'/'}>
+                <h1>{title}</h1>
+            </Link>
             <nav className={style.hidden}>
                 <ul className={style.container_link}>
                     {MenuNavigation.map((item) => (
