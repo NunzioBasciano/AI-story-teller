@@ -19,9 +19,9 @@ export default function Home() {
           title={labels.titlePageLabel}
         />
         <div className={styles.content}>
-          <WindowBox
-            title={'Hello World'}
-          />
+          <WindowBox title={'Hello World'}>
+            <p>Hello</p>
+          </WindowBox>
         </div>
         <Footer />
       </main>

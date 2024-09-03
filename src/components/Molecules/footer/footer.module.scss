@@ -1,9 +1,9 @@
 .container {
-    background-color: var(--light-green);
-    color: var(--dark-orange);
-    display: flex;
     flex-direction: column;
-    align-items: center;
+
+    @include flexCenter-style();
+    @include backgroundAndColor-style(var(--light-green), var(--dark-orange));
+
 }
 
 .container_icons {
@@ -25,10 +25,10 @@
 
 .copyright {
     background-color: var(--dark-green);
-    display: flex;
-    align-items: center;
     justify-content: center;
     padding: 1rem;
     width: 100%;
+
+    @include flexCenter-style();
 
 }

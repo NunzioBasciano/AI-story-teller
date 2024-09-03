@@ -1,0 +1,9 @@
+@mixin flexCenter-style () {
+    display: flex;
+    align-items: center;
+}
+
+@mixin backgroundAndColor-style ($color1, $color2) {
+    background-color: $color1;
+    color: $color2;
+}

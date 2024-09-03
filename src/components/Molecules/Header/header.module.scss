@@ -1,20 +1,19 @@
 .container {
-    background-color: var(--primary-color);
-    color: var(--dark-green);
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 2rem;
     height: 5rem;
     width: 100%;
     box-shadow: var(--light-green) 1.95px 1.95px 2.6px;
+
+    @include flexCenter-style();
+    @include backgroundAndColor-style(var(--primary-color), var(--dark-green));
 }
 
 .container_link {
-    display: flex;
-    align-items: center;
     list-style: none;
     gap: 1rem;
+
+    @include flexCenter-style();
 }
 
 .link {
@@ -33,9 +32,9 @@
 }
 
 .button_hamburger_container {
-    display: flex;
-    align-items: center;
     gap: 1rem;
+
+    @include flexCenter-style();
 }
 
 .hamburger {
