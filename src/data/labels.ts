@@ -11,7 +11,14 @@ export const labels = {
     contactsLabel: 'Contacts',
     information: 'Information',
 
+    /* InputBox */
+    protagonistLabel: "Protagonist's name",
+    setProtagonistLabel: "Insert protagonist's name",
+    antagonistLabel: "Antagonist's name",
+    setAntagonistLabelLabel: "Insert antagonist's name",
 
+    /* SelectBox */
+    genresLabel: 'Genres',
 
 
     /* Footer */

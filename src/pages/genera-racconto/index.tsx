@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from '../../styles/Home.module.scss';
 import Header from "@/components/Molecules/Header/Header";
 import WindowBox from "@/components/Organism/WindowBox/WindowBox";
-import Footer from "@/components/Molecules/footer/Footer";
+import Footer from "@/components/Molecules/Footer/Footer";
 
 function index() {
     return (
