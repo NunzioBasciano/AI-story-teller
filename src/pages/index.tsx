@@ -11,16 +11,18 @@ import { optionSelect } from "@/data/optionSelect";
 import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
 import Switch from "@/components/Atom/Switch/Switch";
+import Label from "@/components/Atom/Label/Label";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
   const [antagonist, setAntagonists] = useState('');
   const [genre, setGenre] = useState('');
   const [response, setResponse] = useState('');
+  const [pegi18, setPegi18] = useState(false);
 
   const handleGenerate = async () => {
     console.log({ protagonist, antagonist, genre });
-    const prompt = `Genera una storia ${genre}, con il protagonista di nome ${protagonist} e l'antagonista di nome ${antagonist}`;
+    const prompt = `Genera una storia ${genre}, per ${pegi18 ? 'adulti' : 'bambini'} con il protagonista di nome ${protagonist} e l'antagonista di nome ${antagonist}`;
 
     if (process.env.NEXT_PUBLIC_GEMINI_KEY) {
       const genAi = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_KEY);
@@ -73,7 +75,15 @@ export default function Home() {
                 list={optionSelect}
                 setAction={setGenre}
               />
-              <Switch />
+              <div className={styles.container_switch}>
+                <Label
+                  label={'Child or Adult'}
+                />
+                <Switch
+                  setActive={setPegi18}
+                  active={pegi18}
+                />
+              </div>
               <div className={styles.container_button}>
                 <Button
                   label={labels.buttonParamsLabel}
