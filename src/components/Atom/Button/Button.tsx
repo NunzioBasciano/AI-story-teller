@@ -5,13 +5,14 @@ interface IButtonProps {
     image?: string;
     children?: React.ReactNode;
     onClick?: () => void;
+    disabled?: boolean;
 }
 
 function Button(props: IButtonProps) {
 
-    const { label, onClick, children } = props;
+    const { label, onClick, children, disabled } = props;
     return (
-        <button onClick={onClick} className={style.button}>
+        <button disabled={disabled} onClick={onClick} className={style.button}>
             {label}
             {children}
         </button>

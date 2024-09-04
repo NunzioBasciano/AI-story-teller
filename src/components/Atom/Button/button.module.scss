@@ -12,4 +12,11 @@
 
     @include backgroundAndColor-style(var(--dark-green), var(--light-orange));
 
+    &:disabled {
+
+        &:hover {
+            @include backgroundAndColor-style(var(--dark-green), var(--light-orange));
+        }
+    }
+
 }

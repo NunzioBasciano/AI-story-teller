@@ -19,6 +19,8 @@ export default function Home() {
     console.log({ protagonist, antagonist, genre })
   }
 
+  const validation = protagonist.trim().length > 0 && antagonist.trim().length > 0 && genre.length > 0;
+
   return (
     <>
       <Head>
@@ -57,6 +59,7 @@ export default function Home() {
                 <Button
                   label={labels.buttonParamsLabel}
                   onClick={handleGenerate}
+                  disabled={!validation}
                 />
               </div>
             </div>
