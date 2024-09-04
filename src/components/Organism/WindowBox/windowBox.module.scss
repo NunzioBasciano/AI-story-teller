@@ -1,11 +1,5 @@
 .container {
-    background-color: var(--primary-color);
-    box-shadow: var(--dark-green) 0px 3px 5px;
-    margin: auto;
-    padding: 1rem;
-    max-width: 900px;
-    width: 100%;
-    min-height: 90dvh;
+    @include windowBox-style();
 }
 
 .title {

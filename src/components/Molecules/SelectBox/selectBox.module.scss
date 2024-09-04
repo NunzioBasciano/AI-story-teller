@@ -5,12 +5,14 @@
 .select {
     @include paddingRadius-style(0.45rem, 3rem, 0.5rem, (var(--dark-green)));
     @include backgroundAndColor-style((var(--light-orange)), (var(--dark-green)));
+
 }
 
 .option {
     padding: 1rem;
 
-    &:hover {
+    /*     &:focus {
+        padding: 1rem;
         @include backgroundAndColor-style((var(--light-green)), (var(--dark-orange)));
-    }
+    } */
 }

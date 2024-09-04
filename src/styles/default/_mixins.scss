@@ -13,3 +13,13 @@
     border-radius: $radius;
     border: 1px solid $color;
 }
+
+@mixin windowBox-style () {
+    background-color: var(--primary-color);
+    box-shadow: var(--dark-green) 0px 3px 5px;
+    margin: auto;
+    padding: 1rem;
+    max-width: 900px;
+    width: 100%;
+
+}
