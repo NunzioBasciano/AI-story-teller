@@ -5,13 +5,13 @@ import { labels } from '../data/labels'
 import WindowBox from "../components/Organism/WindowBox/WindowBox";
 import Footer from '../components/Molecules/Footer/Footer';
 import InputBox from '../components/Molecules/InputBox/InputBox';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
 import { optionSelect } from "@/data/optionSelect";
 import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
-import Switch from "@/components/Atom/Switch/Switch";
 import Label from "@/components/Atom/Label/Label";
+import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -76,12 +76,10 @@ export default function Home() {
                 setAction={setGenre}
               />
               <div className={styles.container_switch}>
-                <Label
-                  label={'Child or Adult'}
-                />
-                <Switch
-                  setActive={setPegi18}
-                  active={pegi18}
+                <SwitchBox
+                  label={labels.childOrAdultLabel}
+                  setValue={setPegi18}
+                  value={pegi18}
                 />
               </div>
               <div className={styles.container_button}>

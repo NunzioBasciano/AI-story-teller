@@ -29,6 +29,9 @@ export const labels = {
     /* SelectBox */
     selectLabel: 'Select genre',
 
+    /* SwitchBox */
+    childOrAdultLabel: 'Child or Adult',
+
     /* Footer */
     copyrightLabel: '©2024 Copyright: Nunzio Basciano',
     githubIconAlt: 'github icon',

@@ -1,0 +1,5 @@
+.container {
+    flex-direction: column;
+    @include flexCenter-style;
+
+}
