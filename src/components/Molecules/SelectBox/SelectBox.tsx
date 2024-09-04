@@ -2,6 +2,7 @@ import Label, { ILabelProps } from '@/components/Atom/Label/Label'
 import style from './selectBox.module.scss'
 import { ListOption } from '@/data/types/common'
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import { labels } from '@/data/labels';
 
 interface ISelectBoxProps {
     label: string;
@@ -23,7 +24,7 @@ function SelectBox(props: ISelectBoxProps) {
             />
             <select className={style.select} name="select" onChange={handleChange}>
                 <option value="" hidden>
-                    Select...
+                    {labels.selectLabel}
                 </option>
                 {list.map((item) => {
                     return (

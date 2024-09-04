@@ -26,6 +26,8 @@ export const labels = {
 
     buttonParamsLabel: 'Generate',
 
+    /* SelectBox */
+    selectLabel: 'Select genre',
 
     /* Footer */
     copyrightLabel: '©2024 Copyright: Nunzio Basciano',
