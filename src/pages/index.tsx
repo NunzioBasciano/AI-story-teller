@@ -19,8 +19,10 @@ export default function Home() {
   const [genre, setGenre] = useState('');
   const [response, setResponse] = useState('');
   const [pegi18, setPegi18] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleGenerate = async () => {
+    setIsLoading(true);
     console.log({ protagonist, antagonist, genre });
     const prompt = `Genera una storia ${genre}, per ${pegi18 ? 'adulti' : 'bambini'} con il protagonista di nome ${protagonist} e l'antagonista di nome ${antagonist}`;
 
@@ -37,6 +39,7 @@ export default function Home() {
         setResponse(output);
       }
     }
+    setIsLoading(false);
   }
 
   const validation = protagonist.trim().length > 0 && antagonist.trim().length > 0 && genre.length > 0;
@@ -90,7 +93,9 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className={styles.container_story}>{response}</div>
+            {isLoading ?
+              <div className={styles.loading}>Il risultato è in caricamento</div> :
+              <div className={styles.container_story}>{response}</div>}
           </WindowBox>
         </div>
         <Footer />
