@@ -10,6 +10,7 @@ import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
 import { optionSelect } from "@/data/optionSelect";
 import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
+import Switch from "@/components/Atom/Switch/Switch";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -72,6 +73,7 @@ export default function Home() {
                 list={optionSelect}
                 setAction={setGenre}
               />
+              <Switch />
               <div className={styles.container_button}>
                 <Button
                   label={labels.buttonParamsLabel}
@@ -80,11 +82,9 @@ export default function Home() {
                 />
               </div>
             </div>
+            <div className={styles.container_story}>{response}</div>
           </WindowBox>
         </div>
-        <WindowBox>
-          <p className={styles.container_story}>{response}</p>
-        </WindowBox>
         <Footer />
       </main>
     </>

@@ -1,0 +1,31 @@
+.container {
+    width: 5rem;
+    height: 2.2rem;
+    border: 1px solid var(--dark-green);
+    border-radius: 2.1rem;
+    margin-top: 1.8rem;
+    position: relative;
+    cursor: pointer;
+
+    @include flexCenter-style;
+    @include backgroundAndColor-style(var(--dark-green), var(--light-orange));
+
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--dark-green);
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    transition: all 0.2S ease;
+
+    @include backgroundAndColor-style(var(--dark-orange), var(--dark-green));
+
+
+}
+
+.active {
+    left: 47px;
+}
