@@ -12,7 +12,7 @@ import Button from '../components/Atom/Button/Button';
 import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
 import { footerLinks } from "../data/footerLinks";
-
+/* prova */
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
   const [antagonist, setAntagonists] = useState('');
