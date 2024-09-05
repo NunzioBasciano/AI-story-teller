@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { labels } from '../../../data/labels';
 import style from './footer.module.scss';
 
@@ -19,7 +18,7 @@ function Footer(props: IFooterProps) {
             <div className={style.container_icons}>
                 {list.map((item) => (
                     <a key={item.alt} className={style.container_icon} href={item.href}>
-                        <Image width={32} height={32} className={style.icon} src={item.src} alt={item.alt} />
+                        <img /* width={32} height={32}  */ className={style.icon} src={item.src} alt={item.alt} />
                     </a>
                 ))}
             </div>
