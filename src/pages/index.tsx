@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
 import Header from "../components/Molecules/Header/Header";
-import { labels } from '../data/labels'
+import { labels } from '../data/labels';
 import WindowBox from "../components/Organism/WindowBox/WindowBox";
 import Footer from '../components/Molecules/Footer/Footer';
 import InputBox from '../components/Molecules/InputBox/InputBox';
