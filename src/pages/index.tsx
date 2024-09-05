@@ -20,6 +20,7 @@ export default function Home() {
   const [pegi18, setPegi18] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const validation = protagonist.trim().length > 0 && antagonist.trim().length > 0 && genre.length > 0;
 
@@ -55,6 +56,19 @@ export default function Home() {
       }
     }
   }
+
+  const handleVoice = () => {
+    setIsPlaying(true);
+    const utterance = new SpeechSynthesisUtterance(response);
+    utterance.lang = 'it-IT';
+    speechSynthesis.speak(utterance);
+  }
+
+  const handleStopVoice = () => {
+    speechSynthesis.cancel();
+    setIsPlaying(false);
+  }
+
   return (
     <>
       <Head>
@@ -104,9 +118,22 @@ export default function Home() {
               </div>
             </div>
             {error && <p>Errore nella generazione</p>}
-            {isLoading ?
-              <div className={styles.loading}>Il risultato è in caricamento</div> :
-              <div className={styles.container_story}>{response}</div>}
+            {isLoading && <div className={styles.loading}>Il risultato è in caricamento</div>}
+
+            {!isLoading && response && (
+              <div className={styles.container_story}>
+                <Button
+                  label={'Riproduci'}
+                  onClick={handleVoice}
+                />
+                <Button
+                  label={'Stop'}
+                  onClick={handleStopVoice}
+                />
+                {response}
+              </div>
+            )}
+
           </WindowBox>
         </div>
         <Footer />
