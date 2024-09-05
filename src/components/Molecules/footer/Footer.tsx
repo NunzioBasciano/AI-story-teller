@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './footer.module.scss';
 import { labels } from '@/data/labels';
+import Image from 'next/image';
 
 const footerLinks = [
     {
@@ -24,7 +25,7 @@ function Footer() {
             <div className={style.container_icons}>
                 {footerLinks.map((item) => (
                     <a key={item.alt} className={style.container_icon} href={item.href}>
-                        <img className={style.icon} src={item.src} alt={item.alt} />
+                        <Image width={35} height={35} className={style.icon} src={item.src} alt={item.alt} />
                     </a>
                 ))}
             </div>
