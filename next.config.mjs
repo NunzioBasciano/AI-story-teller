@@ -4,7 +4,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['src/styles'],
     prependData: `@import './src/styles/default/';`
-  }
+  },
+  output: 'export',
 };
 
 export default nextConfig;
