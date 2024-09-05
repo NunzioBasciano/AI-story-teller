@@ -5,7 +5,7 @@ const nextConfig = {
     includePaths: ['src/styles'],
     prependData: `@import './src/styles/default/';`
   },
-  output: 'export',
+  images: { unoptimized: true }
 };
 
 export default nextConfig;
