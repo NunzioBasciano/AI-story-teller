@@ -15,13 +15,13 @@ function Footer(props: IFooterProps) {
     const { list } = props;
     return (
         <div className={style.container}>
-            <div className={style.container_icons}>
+            {/*             <div className={style.container_icons}>
                 {list.map((item) => (
                     <a key={item.alt} className={style.container_icon} href={item.href}>
-                        <img /* width={32} height={32}  */ className={style.icon} src={item.src} alt={item.alt} />
+                        <img width={32} height={32} className={style.icon} src={item.src} alt={item.alt} />
                     </a>
                 ))}
-            </div>
+            </div> */}
             <div className={style.copyright}>
                 <h4>
                     {labels.copyrightLabel}
