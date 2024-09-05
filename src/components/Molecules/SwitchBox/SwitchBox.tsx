@@ -6,7 +6,7 @@ import { Dispatch, SetStateAction } from 'react';
 interface ISwitchBoxProps {
     label: string;
     value: boolean;
-    setValue: Dispatch<SetStateAction<boolean>>
+    setValue: Dispatch<SetStateAction<boolean>>;
 }
 
 function SwitchBox(props: ISwitchBoxProps) {

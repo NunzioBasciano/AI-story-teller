@@ -14,7 +14,7 @@ function SelectBox(props: ISelectBoxProps) {
     const { label, list, setAction } = props;
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        setAction(e.target.value)
+        setAction(e.target.value);
     }
 
     return (

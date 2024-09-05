@@ -1,5 +1,5 @@
-import { labels } from '../../../data/labels'
-import style from './footer.module.scss'
+import { labels } from '../../../data/labels';
+import style from './footer.module.scss';
 
 interface IItem {
     alt: string,
@@ -12,7 +12,7 @@ interface IFooterProps {
 }
 
 function Footer(props: IFooterProps) {
-    const { list } = props
+    const { list } = props;
     return (
         <div className={style.container}>
             <div className={style.container_icons}>
