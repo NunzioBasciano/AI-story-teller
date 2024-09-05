@@ -1,40 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Story Teller
 
-## Getting Started
+AI Story Teller è un'applicazione web sviluppata con Next.js e TypeScript, progettata per generare storie personalizzate utilizzando l'API di Gemini di Google. Inserisci un tema o un prompt e lascia che l'intelligenza artificiale crei una storia unica per te.
 
-First, run the development server:
+### Caratteristiche
+
+* Generazione di Storie: Inserisci un prompt e ottieni una narrazione completa generata dall'AI.
+* Personalizzazione: Modifica il tema e il tono della tua storia per adattarla alle tue preferenze.
+* Sintesi Vocale: Ascolta la storia generata grazie alla funzione di sintesi vocale integrata.
+* Interfaccia Intuitiva: Facile da usare, con un'interfaccia sviluppata in Next.js e TypeScript.
+
+### Tecnologie Utilizzate
+
+* Linguaggio di Programmazione: TypeScript
+* Framework: Next.js
+* API di Generazione Contenuti: Google Gemini
+* Librerie: @google/generative-ai
+
+
+### Installazione
+
+1. Clona il repository:
+
+```bash
+git clone https://github.com/NunzioBasciano/ai-story-teller.git
+```
+
+2. Naviga nella cartella del progetto:
+
+```bash
+cd ai-story-teller
+```
+
+3. Installa le dipendenze:
+
+```bash
+npm install
+```
+ 
+4. Avvia il server di sviluppo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Utilizzo
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Avvia l'applicazione.
+2. Inserisci un prompt, seleziona un genere e specifica se la storia deve essere per adulti o bambini.
+3. Clicca su "Genera Storia" per ottenere la tua narrazione personalizzata.
+4. Ascolta la storia generata utilizzando i pulsanti di sintesi vocale.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Funzionalità
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Generazione della Storia
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+L'applicazione utilizza l'API route /api/generate.ts per comunicare con l'API di Gemini e generare contenuti. Ecco come funziona:
 
-## Learn More
+* Metodo: POST
+* Corpo della Richiesta: { "prompt": "tuo testo qui" }
+* Risposta
+    * Successo: { "ok": true, "message": "contenuto generato" }
+    * Errore: { "ok": false, "message": "messaggio di errore" }
 
-To learn more about Next.js, take a look at the following resources:
+### Sintesi Vocale
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Riproduci: Legge ad alta voce la storia generata utilizzando la funzione di sintesi vocale del browser.
+* Stop: Ferma la riproduzione della sintesi vocale.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## API Route
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ecco come è strutturata l'API route /api/generate.ts:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```javascript
+import type { NextApiRequest, NextApiResponse } from "next";
+import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
+
+type IBody = {
+    prompt: string;
+};
+
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse<any>,
+) {
+    if (req.method === 'POST') {
+        const { prompt } = req.body as IBody;
+        if (!prompt) {
+            return res.status(400).json({ ok: false, message: 'Missing body' });
+        }
+
+        try {
+            if (process.env.NEXT_PUBLIC_GEMINI_KEY) {
+                const genAi = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_KEY);
+                const model = genAi.getGenerativeModel({ model: 'gemini-1.5-flash' });
+                const result = await model.generateContent(prompt);
+                const output = (
+                    result.response.candidates as GenerateContentCandidate[]
+                )[0].content.parts[0].text;
+
+                if (output) {
+                    return res.status(200).json({ ok: true, message: output });
+                } else {
+                    return res.status(400).json({ ok: false, message: 'No output generated' });
+                }
+            } else {
+                return res.status(500).json({ ok: false, message: "Something went wrong contact the manufacturer!" });
+            }
+        } catch (e) {
+            console.error(e);
+            return res.status(400).json({ ok: false, message: "Error during generation" });
+        }
+    } else {
+        return res.status(405).json({ ok: false, message: "Method not allowed" });
+    }
+}
+```
+
+## Contribuire
+
+Se desideri contribuire al progetto, apri una pull request o segnala problemi tramite le Issue.
+
+## Licenza
+
+Questo progetto è concesso in licenza sotto la Licenza MIT - vedere il file LICENSE per i dettagli.
+
+
+
+
