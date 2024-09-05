@@ -1,5 +1,6 @@
-import { labels } from '../../../data/labels';
+import { labels } from "@/data/labels";
 import style from './footer.module.scss';
+
 
 /* interface IItem {
     alt: string,
@@ -11,17 +12,17 @@ interface IFooterProps {
     list: IItem[],
 } */
 
-function Footer(/* props: IFooterProps */) {
+function Pippo(/* props: IFooterProps */) {
     /*     const { list } = props; */
     return (
         <div className={style.container}>
             {/*             <div className={style.container_icons}>
-                {list.map((item) => (
-                    <a key={item.alt} className={style.container_icon} href={item.href}>
-                        <img width={32} height={32} className={style.icon} src={item.src} alt={item.alt} />
-                    </a>
-                ))}
-            </div> */}
+            {list.map((item) => (
+                <a key={item.alt} className={style.container_icon} href={item.href}>
+                    <img width={32} height={32} className={style.icon} src={item.src} alt={item.alt} />
+                </a>
+            ))}
+        </div> */}
             <div className={style.copyright}>
                 <h4>
                     {labels.copyrightLabel}
@@ -31,5 +32,5 @@ function Footer(/* props: IFooterProps */) {
     )
 }
 
-export default Footer
+export default Pippo;
 
