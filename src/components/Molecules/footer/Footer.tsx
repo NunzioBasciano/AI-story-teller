@@ -3,7 +3,7 @@ import style from './footer.module.scss';
 import { labels } from '@/data/labels';
 
 
-function CopyrightSection() {
+function Footer() {
     return (
         <div className={style.container}>
             <div className={style.copyright}>
@@ -15,4 +15,4 @@ function CopyrightSection() {
     )
 }
 
-export default CopyrightSection
+export default Footer;
