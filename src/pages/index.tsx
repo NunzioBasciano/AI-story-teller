@@ -142,8 +142,8 @@ export default function Home() {
           </WindowBox>
         </div>
         <Footer
-          list={footerLinks}
-        />
+/*           list={footerLinks}
+ */        />
       </main>
     </>
   );
