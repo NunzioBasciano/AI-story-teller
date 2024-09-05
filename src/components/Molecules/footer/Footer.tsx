@@ -1,28 +1,11 @@
-import { labels } from "@/data/labels";
+import React from 'react';
 import style from './footer.module.scss';
+import { labels } from '@/data/labels';
 
 
-/* interface IItem {
-    alt: string,
-    href: string,
-    src: string,
-}
-
-interface IFooterProps {
-    list: IItem[],
-} */
-
-function Pippo(/* props: IFooterProps */) {
-    /*     const { list } = props; */
+function CopyrightSection() {
     return (
         <div className={style.container}>
-            {/*             <div className={style.container_icons}>
-            {list.map((item) => (
-                <a key={item.alt} className={style.container_icon} href={item.href}>
-                    <img width={32} height={32} className={style.icon} src={item.src} alt={item.alt} />
-                </a>
-            ))}
-        </div> */}
             <div className={style.copyright}>
                 <h4>
                     {labels.copyrightLabel}
@@ -32,5 +15,4 @@ function Pippo(/* props: IFooterProps */) {
     )
 }
 
-export default Pippo;
-
+export default CopyrightSection
