@@ -1,18 +1,18 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
-import Header from "@/components/Molecules/Header/Header";
+import Header from "../components/Molecules/Header/Header";
 import { labels } from '../data/labels'
 import WindowBox from "../components/Organism/WindowBox/WindowBox";
 import Footer from '../components/Molecules/Footer/Footer';
 import InputBox from '../components/Molecules/InputBox/InputBox';
 import { useState } from "react";
-import SelectBox from "@/components/Molecules/SelectBox/SelectBox";
-import { optionSelect } from "@/data/optionSelect";
-import Button from "@/components/Atom/Button/Button";
+import SelectBox from "../components/Molecules/SelectBox/SelectBox",
+import { optionSelect } from "../data/optionSelect";
+import Button from '../components/Atom/Button/Button';
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
-import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
-import Toast from "@/components/Atom/Toast/Toast";
-import { footerLinks } from "@/data/footerLinks";
+import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
+import Toast from "../components/Atom/Toast/Toast";
+import { footerLinks } from "../data/footerLinks";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
