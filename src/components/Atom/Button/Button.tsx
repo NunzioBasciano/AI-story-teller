@@ -2,7 +2,6 @@ import style from './button.module.scss'
 
 interface IButtonProps {
     label?: string;
-    image?: string;
     children?: React.ReactNode;
     onClick?: () => void;
     disabled?: boolean;
