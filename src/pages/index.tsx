@@ -11,6 +11,7 @@ import { optionSelect } from "@/data/optionSelect";
 import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
 import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
+import Toast from "@/components/Atom/Toast/Toast";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -81,6 +82,11 @@ export default function Home() {
           title={labels.titlePageLabel}
         />
         <div className={styles.content}>
+          {error && <Toast
+            title={'Errore nella digitazione'}
+            message={'Qualcosa è andato storto con l\'operazione che hai lanciato'}
+            setAction={setError}
+          />}
           <WindowBox
             title={labels.storyParamsLabel}
           >
@@ -117,7 +123,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            {error && <p>Errore nella generazione</p>}
             {isLoading && <div className={styles.loading}>Il risultato è in caricamento</div>}
 
             {!isLoading && response && (
