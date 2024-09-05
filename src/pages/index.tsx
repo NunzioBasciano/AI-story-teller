@@ -12,6 +12,7 @@ import Button from "@/components/Atom/Button/Button";
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
 import SwitchBox from "@/components/Molecules/SwitchBox/SwitchBox";
 import Toast from "@/components/Atom/Toast/Toast";
+import { footerLinks } from "@/data/footerLinks";
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -141,7 +142,9 @@ export default function Home() {
 
           </WindowBox>
         </div>
-        <Footer />
+        <Footer
+          list={footerLinks}
+        />
       </main>
     </>
   );

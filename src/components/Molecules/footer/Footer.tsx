@@ -1,25 +1,23 @@
 import { labels } from '@/data/labels'
 import style from './footer.module.scss'
+import { footerLinks } from '@/data/footerLinks'
 
+interface IItem {
+    alt: string,
+    href: string,
+    src: string,
+}
 
-const footerLinks = [
-    {
-        href: 'https://github.com/NunzioBasciano',
-        src: "https://cdn.iconscout.com/icon/premium/png-256-thumb/github-2749268-2284658.png?f=webp&w=256",
-        alt: labels.githubIconAlt,
-    },
-    {
-        href: 'https://www.linkedin.com/in/nunzio-basciano/',
-        src: '/linkedin.png',
-        alt: labels.linkedinIconAlt,
-    }
-];
+interface IFooterProps {
+    list: IItem[],
+}
 
-function Footer() {
+function Footer(props: IFooterProps) {
+    const { list } = props
     return (
         <div className={style.container}>
             <div className={style.container_icons}>
-                {footerLinks.map((item) => (
+                {list.map((item) => (
                     <a key={item.alt} className={style.container_icon} href={item.href}>
                         <img className={style.icon} src={item.src} alt={item.alt} />
                     </a>
