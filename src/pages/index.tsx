@@ -6,7 +6,7 @@ import WindowBox from "../components/Organism/WindowBox/WindowBox";
 import Footer from '../components/Molecules/Footer/Footer';
 import InputBox from '../components/Molecules/InputBox/InputBox';
 import { useState } from "react";
-import SelectBox from "../components/Molecules/SelectBox/SelectBox",
+import SelectBox from "../components/Molecules/SelectBox/SelectBox";
 import { optionSelect } from "../data/optionSelect";
 import Button from '../components/Atom/Button/Button';
 import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
