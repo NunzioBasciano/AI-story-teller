@@ -1,10 +1,8 @@
-'use client'
-
 import style from './header.module.scss'
-import Button from '@/components/Atom/Button/Button';
-import { labels } from '@/data/labels';
+import Button from '../../Atom/Button/Button';
+import { labels } from '../../../data/labels';
 import Link from 'next/link';
-import { MenuNavigation } from '@/data/menuNavigation';
+import { MenuNavigation } from '../../../data/menuNavigation';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 

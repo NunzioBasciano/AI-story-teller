@@ -1,5 +1,5 @@
-import Input from '@/components/Atom/Input/Input'
-import Label from '@/components/Atom/Label/Label'
+import Input from '../../Atom/Input/Input'
+import Label from '../../Atom/Label/Label'
 import style from './inputBox.module.scss'
 import { Dispatch, SetStateAction } from 'react';
 

@@ -1,6 +1,5 @@
-import { labels } from '@/data/labels'
+import { labels } from '../../../data/labels'
 import style from './footer.module.scss'
-import { footerLinks } from '@/data/footerLinks'
 
 interface IItem {
     alt: string,

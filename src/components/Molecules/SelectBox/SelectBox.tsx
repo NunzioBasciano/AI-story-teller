@@ -1,8 +1,8 @@
-import Label, { ILabelProps } from '@/components/Atom/Label/Label'
+import Label from '../../Atom/Label/Label'
 import style from './selectBox.module.scss'
-import { ListOption } from '@/data/types/common'
+import { ListOption } from '../../../data/types/common'
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
-import { labels } from '@/data/labels';
+import { labels } from '../../../data/labels';
 
 interface ISelectBoxProps {
     label: string;

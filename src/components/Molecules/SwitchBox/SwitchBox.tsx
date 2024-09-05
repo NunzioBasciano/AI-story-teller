@@ -1,6 +1,6 @@
-import Label from '@/components/Atom/Label/Label'
+import Label from '../../Atom/Label/Label'
 import style from './switchBox.module.scss'
-import Switch from '@/components/Atom/Switch/Switch';
+import Switch from '../../Atom/Switch/Switch';
 import { Dispatch, SetStateAction } from 'react';
 
 interface ISwitchBoxProps {
