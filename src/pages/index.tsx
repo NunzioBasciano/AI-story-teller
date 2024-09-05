@@ -64,12 +64,12 @@ export default function Home() {
     const utterance = new SpeechSynthesisUtterance(response);
     utterance.lang = 'it-IT';
     speechSynthesis.speak(utterance);
-  }
+  };
 
   const handleStopVoice = () => {
     speechSynthesis.cancel();
     setIsPlaying(false);
-  }
+  };
 
   return (
     <>
