@@ -9,7 +9,6 @@ import { useState } from "react";
 import SelectBox from "../components/Molecules/SelectBox/SelectBox";
 import { optionSelect } from "../data/optionSelect";
 import Button from '../components/Atom/Button/Button';
-import { GenerateContentCandidate, GoogleGenerativeAI } from "@google/generative-ai";
 import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
 import { footerLinks } from "../data/footerLinks";

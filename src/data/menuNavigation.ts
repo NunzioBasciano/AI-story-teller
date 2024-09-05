@@ -1,4 +1,4 @@
-import { labels } from "./labels"
+import { labels } from "./labels";
 
 export const MenuNavigation = [
     { label: labels.homeLabel, path: '/' },
