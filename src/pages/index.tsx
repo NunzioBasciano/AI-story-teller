@@ -9,9 +9,10 @@ import { optionSelect } from "../data/optionSelect";
 import Button from '../components/Atom/Button/Button';
 import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
-import { footerLinks } from "../data/footerLinks";
-import Footer from '../components/Molecules/Footer/Footer';
+/* import { footerLinks } from "../data/footerLinks"; */
 import InputBox from "../components/Molecules/InputBox/InputBox";
+import Footer from "@/components/Molecules/Footer/Footer";
+
 /* prova */
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
