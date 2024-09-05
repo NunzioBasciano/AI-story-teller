@@ -9,8 +9,8 @@ import { optionSelect } from "../data/optionSelect";
 import Button from '../components/Atom/Button/Button';
 import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
-import { footerLinks } from "../data/footerLinks";
-import Footer from '../components/Molecules/Footer/Footer';
+/* import { footerLinks } from "../data/footerLinks";
+import Footer from '../components/Molecules/Footer/Footer'; */
 import InputBox from "../components/Molecules/InputBox/InputBox";
 /* prova */
 export default function Home() {
@@ -141,9 +141,9 @@ export default function Home() {
 
           </WindowBox>
         </div>
-        <Footer
+        {/*         <Footer
           list={footerLinks}
-        />
+        /> */}
       </main>
     </>
   );
