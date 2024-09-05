@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import style from './copyrightSection.module.scss'
 
 function CopyrightSection() {
     return (
-        <div>Ciao</div>
+        <div className={style.container}>Ciao</div>
     )
 }
 
