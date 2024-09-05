@@ -1,13 +1,13 @@
-import Label from '../../Atom/Label/Label'
-import style from './selectBox.module.scss'
-import { ListOption } from '../../../data/types/common'
+import Label from '../../Atom/Label/Label';
+import style from './selectBox.module.scss';
+import { ListOption } from '../../../data/types/common';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 import { labels } from '../../../data/labels';
 
 interface ISelectBoxProps {
     label: string;
     list: ListOption[];
-    setAction: Dispatch<SetStateAction<string>>
+    setAction: Dispatch<SetStateAction<string>>;
 }
 
 function SelectBox(props: ISelectBoxProps) {
