@@ -11,7 +11,7 @@ import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
 /* import { footerLinks } from "../data/footerLinks"; */
 import InputBox from "../components/Molecules/InputBox/InputBox";
-import Footer from '../components/Molecules/Footer/Footer';
+import CopyrightSection from "@/components/Molecules/CopyrightSection/CopyrightSection";
 /* prova */
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -144,7 +144,7 @@ export default function Home() {
         {/*         <Footer
           list={footerLinks}
        /> */}
-        <Footer />
+        <CopyrightSection />
       </main>
     </>
   );
