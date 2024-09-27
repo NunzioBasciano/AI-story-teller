@@ -33,7 +33,7 @@ export const labels = {
     childOrAdultLabel: 'Child or Adult',
 
     /* Footer */
-    copyrightLabel: '©2024 Copyright: Nunzio Basciano',
+    copyrightLabel: '©2024 Nunzio Basciano',
     githubIconAlt: 'github icon',
     linkedinIconAlt: 'linkedin icon',
 

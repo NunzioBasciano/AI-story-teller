@@ -10,7 +10,6 @@ interface IHeaderProps {
     title: string;
 }
 
-
 function Header(props: IHeaderProps) {
     const router = useRouter();
     const currentPath = router.pathname;
@@ -44,9 +43,6 @@ function Header(props: IHeaderProps) {
                 </ul>
             </nav>
             <div className={style.button_hamburger_container}>
-                <Button
-                    label={labels.loginButtonLabel}
-                />
                 <img
                     onClick={handleClick}
                     className={style.hamburger}
