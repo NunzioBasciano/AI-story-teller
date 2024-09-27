@@ -1,0 +1,60 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+
+    .nameSection {
+        margin-top: -1rem;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        height: 200px;
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+.form div {
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .form {
+        width: 70%;
+        gap: 1rem;
+
+        .nameSection {
+            gap: 1rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .nameSection {
+        flex-direction: column; // Cambia in colonna quando lo schermo è ridotto
+    }
+}

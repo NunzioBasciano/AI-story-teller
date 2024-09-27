@@ -9,22 +9,36 @@ interface IInputBox {
     placeholder: string;
     setValue: Dispatch<SetStateAction<string>>;
     value: string;
+    inputType?: 'text' | 'email' | 'number' | 'textarea';
 }
 
 function InputBox(props: IInputBox) {
 
-    const { label, placeholder, setValue, value } = props;
+    const { label, placeholder, setValue, value, inputType } = props;
 
     return (
         <div className={style.container}>
             <Label
                 label={label}
             />
-            <Input
-                placeholder={placeholder}
-                value={value}
-                setValue={setValue}
-            />
+
+            {inputType === 'textarea' ? (
+                <textarea
+                    placeholder={placeholder}
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                />
+            ) : (
+                <Input
+                    type={inputType}
+                    placeholder={placeholder}
+                    value={value}
+                    setValue={setValue}
+                />
+
+            )
+
+            }
         </div>
     )
 }

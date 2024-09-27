@@ -5,7 +5,7 @@ interface IInputProps {
     type?: string;
     placeholder: string;
     value: string;
-    setValue: Dispatch<SetStateAction<string>>
+    setValue: Dispatch<SetStateAction<string>>;
 }
 
 function Input(props: IInputProps) {
