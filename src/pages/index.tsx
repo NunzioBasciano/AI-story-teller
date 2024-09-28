@@ -10,6 +10,9 @@ import SwitchBox from "../components/Molecules/SwitchBox/SwitchBox";
 import Toast from "../components/Atom/Toast/Toast";
 import InputBox from "../components/Molecules/InputBox/InputBox";
 import { IAnswer } from "@/data/types/common";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Home() {
   const [protagonist, setProtagonist] = useState('');
@@ -25,6 +28,8 @@ export default function Home() {
   const [paragraphs, setParagraphs] = useState<string[]>([]);
   const [questions, setQuestions] = useState<string[]>([]);
   const [input, setInput] = useState<IAnswer>({ question1: '', question2: '', question3: '', question4: '', question5: '' });
+  const [savedStory, setSavedStory] = useState<string | null>(null);
+
 
   // Validation function to ensure protagonist, antagonist, and genre are set
   const validation = protagonist.trim().length > 0 && antagonist.trim().length > 0 && genre.length > 0;
@@ -178,6 +183,24 @@ export default function Home() {
     setQuestions(newQuestions);
   };
 
+  /**
+ * Function for saving the story in local storage.
+ * @returns {void}
+ */
+  const handleSaveStory = (): void => {
+    const storyToSave = {
+      title: titles[0],
+      paragraphs: paragraphs.join('\n'),
+    };
+
+    const existingFavorites = localStorage.getItem('favorites');
+    const favoritesArray = existingFavorites ? JSON.parse(existingFavorites) : [];
+    favoritesArray.push(storyToSave);
+
+    localStorage.setItem('favorites', JSON.stringify(favoritesArray));
+    setSavedStory(storyToSave.title);
+    toast.success('Storia salvata nel local storage!');
+  };
 
 
   // useEffect to reformat the generated story whenever the response changes
@@ -198,6 +221,7 @@ export default function Home() {
           message={'Qualcosa è andato storto con l\'operazione che hai lanciato'}
           setAction={setError}
         />}
+        <ToastContainer />
 
         <WindowBox title={labels.storyParamsLabel}>
           {/* Sezione input per protagonista, antagonista e genere */}
@@ -232,6 +256,11 @@ export default function Home() {
               label={labels.buttonParamsLabel}
               onClick={handleGenerate}
               disabled={!validation}
+            />
+            <Button
+              label={'Salva Storia'}
+              onClick={handleSaveStory}
+              disabled={!response} // Disabilita il pulsante se non c'è risposta
             />
           </div>
 
