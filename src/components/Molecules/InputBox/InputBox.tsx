@@ -3,7 +3,6 @@ import Label from '../../Atom/Label/Label';
 import style from './inputBox.module.scss';
 import { Dispatch, SetStateAction } from 'react';
 
-
 interface IInputBox {
     label: string;
     placeholder: string;
@@ -37,9 +36,7 @@ function InputBox(props: IInputBox) {
                     value={value}
                     setValue={setValue}
                 />
-
             )
-
             }
         </div>
     )

@@ -1,5 +1,4 @@
 import style from './header.module.scss'
-import Button from '../../Atom/Button/Button';
 import { labels } from '../../../data/labels';
 import Link from 'next/link';
 import { MenuNavigation } from '../../../data/menuNavigation';
@@ -18,6 +17,10 @@ function Header(props: IHeaderProps) {
 
     const handleClick = (event: React.MouseEvent<HTMLImageElement>) => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const handleMenuItemClick = () => {
+        setIsMenuOpen(false); // Close the menu
     };
 
     useEffect(() => {
@@ -54,7 +57,9 @@ function Header(props: IHeaderProps) {
                     {MenuNavigation.map((item) => (
                         <li
                             key={item.label}
-                            className={style.hamburgerLink}>
+                            className={style.hamburgerLink}
+                            onClick={handleMenuItemClick} // Close the menu when clicking on an item
+                        >
                             <Link href={item.path}>
                                 {item.label}
                             </Link>

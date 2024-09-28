@@ -35,7 +35,6 @@
 
 .form div {
     width: 100%;
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,11 +49,9 @@
     }
 }
 
-
 @media screen and (max-width: 1024px) {
 
-
     .nameSection {
-        flex-direction: column; // Cambia in colonna quando lo schermo è ridotto
+        flex-direction: column;
     }
 }

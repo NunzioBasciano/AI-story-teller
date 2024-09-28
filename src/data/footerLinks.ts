@@ -1,7 +1,5 @@
 import { labels } from "./labels";
 
-
-
 export const footerLinks = [
     {
         href: 'https://github.com/NunzioBasciano',

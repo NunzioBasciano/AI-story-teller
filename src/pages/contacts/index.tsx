@@ -6,7 +6,6 @@ import styles from "@/styles/Home.module.scss";
 import Button from '@/components/Atom/Button/Button';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm() {
 
@@ -23,15 +22,19 @@ function ContactForm() {
         const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
-            [name]: value // Aggiorna il campo specifico nell'oggetto
+            [name]: value
         }));
     };
 
+    /** 
+       * Handles form submission.
+       * Sends an email using EmailJS and displays success or error messages.
+       * 
+       * @param e - The form submission event.
+       */
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Form Data:', formData);
 
-        // Usa EmailJS per inviare i dati del form
         emailjs.send('service_dbodkzv', 'template_qmvo4s8',
             {
                 firstName: formData.firstName,

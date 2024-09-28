@@ -1,6 +1,6 @@
 import React from 'react';
-import WindowBox from '@/components/Organism/WindowBox/WindowBox'; // Assicurati che il percorso sia corretto
-import styles from './information.module.scss'; // Importa il tuo stile
+import WindowBox from '@/components/Organism/WindowBox/WindowBox';
+import styles from './information.module.scss';
 import style from "@/styles/Home.module.scss";
 
 
@@ -30,6 +30,12 @@ const InfoPage = () => {
                             </li>
                             <li>
                                 <strong>Rispondi alle Domande:</strong> Dopo aver generato la storia, rispondi alle domande di comprensione del testo.
+                            </li>
+                            <li>
+                                <strong>Salva storia:</strong> Dopo aver generato la storia, clicca sul pulsante Salva storia.
+                            </li>
+                            <li>
+                                <strong>Tue storie:</strong> Dopo aver salvato la storia, visualizzala nella sezione 'Le tue storie'.
                             </li>
                         </ul>
                     </section>

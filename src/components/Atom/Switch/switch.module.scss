@@ -21,8 +21,6 @@
     transition: all 0.2S ease;
 
     @include backgroundAndColor-style(var(--dark-orange), var(--dark-green));
-
-
 }
 
 .active {
