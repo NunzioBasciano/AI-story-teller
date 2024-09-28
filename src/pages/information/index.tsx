@@ -35,7 +35,7 @@ const InfoPage = () => {
                                 <strong>Salva storia:</strong> Dopo aver generato la storia, clicca sul pulsante Salva storia.
                             </li>
                             <li>
-                                <strong>Tue storie:</strong> Dopo aver salvato la storia, visualizzala nella sezione 'Le tue storie'.
+                                <strong>Tue storie:</strong> Dopo aver salvato la storia, visualizzala nella sezione &apos;Le tue storie&apos;.
                             </li>
                         </ul>
                     </section>
