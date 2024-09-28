@@ -51,6 +51,9 @@ function ContactForm() {
             });
     };
 
+    const formValidation = formData.firstName.length > 0 && formData.lastName.length > 0 && formData.phone.length > 0;
+
+
     return (
         <div className={styles.content}>
             <ToastContainer />
@@ -105,7 +108,9 @@ function ContactForm() {
                         value={formData.message}
                         setValue={(value) => handleChange({ target: { name: 'message', value } } as React.ChangeEvent<HTMLInputElement>)}
                     />
-                    <Button >
+                    <Button
+                        disabled={!formValidation}
+                    >
                         Invia
                     </Button>
                 </form>
