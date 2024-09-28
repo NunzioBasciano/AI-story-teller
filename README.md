@@ -1,13 +1,14 @@
 # AI Story Teller
 
-AI Story Teller è un'applicazione web sviluppata con Next.js e TypeScript, progettata per generare storie personalizzate utilizzando l'API di Gemini di Google. Inserisci un tema o un prompt e lascia che l'intelligenza artificiale crei una storia unica per te.
+AI Story Teller è un'applicazione web che utilizza l'intelligenza artificiale per generare storie coinvolgenti. L'utente può inserire parole chiave, scegliere il genere della storia e ottenere racconti unici e creativi in pochi istanti.
+
 
 ### Caratteristiche
 
-* Generazione di Storie: Inserisci un prompt e ottieni una narrazione completa generata dall'AI.
-* Personalizzazione: Modifica il tema e il tono della tua storia per adattarla alle tue preferenze.
-* Sintesi Vocale: Ascolta la storia generata grazie alla funzione di sintesi vocale integrata.
-* Interfaccia Intuitiva: Facile da usare, con un'interfaccia sviluppata in Next.js e TypeScript.
+- **Generazione di Storie**: Inserisci parole chiave e seleziona il genere per generare storie personalizzate.
+- **Interfaccia Intuitiva**: Un design semplice e pulito che rende facile l'interazione con l'app.
+- **Salvataggio Storie**: Gli utenti possono salvare le storie generate per un uso futuro.
+
 
 ### Tecnologie Utilizzate
 
@@ -36,8 +37,14 @@ cd ai-story-teller
 ```bash
 npm install
 ```
+
+4. Configura il tuo ambiente: Crea un file .env.local e aggiungi le variabili ambientali necessarie, ad esempio:
+
+```bash
+GEMINI_API_KEY=your_gemini_api_key
+```
  
-4. Avvia il server di sviluppo:
+5. Avvia il server di sviluppo:
 
 ```bash
 npm run dev
@@ -49,6 +56,8 @@ npm run dev
 2. Inserisci un prompt, seleziona un genere e specifica se la storia deve essere per adulti o bambini.
 3. Clicca su "Genera Storia" per ottenere la tua narrazione personalizzata.
 4. Ascolta la storia generata utilizzando i pulsanti di sintesi vocale.
+5. Rispondi alle domande di comprensione del testo
+6. Verifica se le tue risposte sono corrette mediante l'analisi di Gemini
 
 ## Funzionalità
 
@@ -124,6 +133,12 @@ Se desideri contribuire al progetto, apri una pull request o segnala problemi tr
 ## Licenza
 
 Questo progetto è concesso in licenza sotto la Licenza MIT - vedere il file LICENSE per i dettagli.
+
+## Contatti
+
+Per domande o suggerimenti, puoi contattarmi via email a [nunzio.basciano1988@gmail.com].
+
+
 
 
 
