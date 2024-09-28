@@ -258,7 +258,7 @@ export default function Home() {
               disabled={!validation}
             />
             <Button
-              label={'Salva Storia'}
+              label={'Salva'}
               onClick={handleSaveStory}
               disabled={!response}
             />
