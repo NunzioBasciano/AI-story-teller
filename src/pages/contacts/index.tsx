@@ -51,7 +51,7 @@ function ContactForm() {
             });
     };
 
-    const formValidation = formData.firstName.length > 0 && formData.lastName.length > 0 && formData.phone.length > 0;
+    const formValidation = formData.firstName.trim().length > 0 && formData.lastName.trim().length > 0 && formData.phone.trim().length > 0;
 
 
     return (

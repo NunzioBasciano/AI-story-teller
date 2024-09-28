@@ -4,7 +4,6 @@ import { labels } from '@/data/labels'
 import Footer from '../Molecules/footer/Footer'
 import styles from "@/styles/Home.module.scss";
 
-
 function Layout({ children }: { children: React.ReactNode }) {
     return (
         <main className={styles.main}>

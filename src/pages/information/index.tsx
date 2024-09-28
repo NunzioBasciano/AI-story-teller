@@ -10,63 +10,45 @@ const InfoPage = () => {
             <WindowBox title={'Informazioni'}>
                 <div className={styles.container}>
                     <section className={styles.introduction}>
-                        <h2>Introduzione</h2>
-                        <p>[Nome dell'App] è un'applicazione progettata per [breve descrizione]. Risolve il problema di [problema specifico].</p>
+                        <p>AI Story Teller ti consente di generare storie in base ai personaggi e al genere che scegli. Segui le istruzioni di seguito per iniziare.</p>
                     </section>
 
                     <section className={styles.features}>
-                        <h2>Caratteristiche Principali</h2>
+                        <h2>Come Usare l'Applicazione</h2>
                         <ul>
-                            <li>Funzionalità 1: [Descrizione]</li>
-                            <li>Funzionalità 2: [Descrizione]</li>
-                            <li>Funzionalità 3: [Descrizione]</li>
+                            <li>
+                                <strong>Inserisci i Personaggi:</strong> Compila i campi con il nome del protagonista e dell'antagonista.
+                            </li>
+                            <li>
+                                <strong>Seleziona il Genere:</strong> Scegli il genere della storia dal menu a discesa.
+                            </li>
+                            <li>
+                                <strong>Scegli la Categoria:</strong> Indica se la storia è per adulti o bambini utilizzando l'interruttore.
+                            </li>
+                            <li>
+                                <strong>Genera la Storia:</strong> Clicca sul pulsante per generare la storia.
+                            </li>
+                            <li>
+                                <strong>Rispondi alle Domande:</strong> Dopo aver generato la storia, rispondi alle domande di comprensione del testo.
+                            </li>
                         </ul>
                     </section>
 
-                    <section className={styles.instructions}>
-                        <h2>Istruzioni per l'Uso</h2>
-                        <p>Segui questi passaggi per iniziare a utilizzare l'app:</p>
-                        <ol>
-                            <li>Passo 1: [Descrizione]</li>
-                            <li>Passo 2: [Descrizione]</li>
-                            <li>Passo 3: [Descrizione]</li>
-                        </ol>
-                        <a href="[link al video tutorial]" target="_blank" rel="noopener noreferrer">Guarda il video tutorial</a>
-                    </section>
+                    <div className={styles.contacts}>
+                        <h2>Contattaci</h2>
+                        <p>
+                            Se hai domande o suggerimenti, non esitare a contattarci all'indirizzo email:
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"> nunzio.basciano1988@gmail.com</a>.
+                        </p>
+                    </div>
 
-                    <section className={styles.contact}>
-                        <h2>Informazioni sui Contatti</h2>
-                        <p>Email di supporto: <a href="mailto:support@example.com">support@example.com</a></p>
-                        <p>Seguici su <a href="[link ai social]" target="_blank" rel="noopener noreferrer">Social Media</a></p>
-                    </section>
-
-                    <section className={styles.faq}>
-                        <h2>FAQ</h2>
-                        <ul>
-                            <li>Domanda 1: [Risposta]</li>
-                            <li>Domanda 2: [Risposta]</li>
-                        </ul>
-                    </section>
-
-                    <section className={styles.terms}>
-                        <h2>Termini e Condizioni</h2>
-                        <p>Leggi i nostri <a href="[link ai termini]" target="_blank" rel="noopener noreferrer">termini di servizio</a> e <a href="[link alla privacy]" target="_blank" rel="noopener noreferrer">politica sulla privacy</a>.</p>
-                    </section>
-
-                    <section className={styles.feedback}>
-                        <h2>Feedback e Suggerimenti</h2>
-                        <p>Hai suggerimenti? <a href="[link al modulo di feedback]" target="_blank" rel="noopener noreferrer">Compila questo modulo</a>.</p>
-                    </section>
-
-                    <section className={styles.team}>
-                        <h2>Chi Siamo</h2>
-                        <p>[Brevi biografie o descrizione del team].</p>
-                    </section>
-
-                    <section className={styles.credits}>
-                        <h2>Riconoscimenti</h2>
-                        <p>Grazie a [crediti a risorse esterne].</p>
-                    </section>
+                    <div className={styles.legal}>
+                        <h2>Informazioni Legali</h2>
+                        <p>
+                            Questa applicazione è un progetto di esempio per dimostrare l'uso di Next.js e React.
+                            Tutti i diritti riservati.
+                        </p>
+                    </div>
                 </div>
             </WindowBox>
         </div>
