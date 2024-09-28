@@ -6,10 +6,11 @@ interface IInputProps {
     placeholder: string;
     value: string;
     setValue: Dispatch<SetStateAction<string>>;
+    name?: string;
 }
 
 function Input(props: IInputProps) {
-    const { type = 'text', placeholder, value, setValue } = props;
+    const { type = 'text', placeholder, value, setValue, name } = props;
 
     return (
         <input
@@ -18,6 +19,7 @@ function Input(props: IInputProps) {
             className={style.input}
             type={type}
             placeholder={placeholder}
+            name={name}
         />
     )
 }

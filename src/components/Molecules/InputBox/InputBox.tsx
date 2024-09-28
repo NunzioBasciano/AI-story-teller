@@ -10,11 +10,12 @@ interface IInputBox {
     setValue: Dispatch<SetStateAction<string>>;
     value: string;
     inputType?: 'text' | 'email' | 'number' | 'textarea';
+    inputName?: string;
 }
 
 function InputBox(props: IInputBox) {
 
-    const { label, placeholder, setValue, value, inputType } = props;
+    const { label, placeholder, setValue, value, inputType, inputName } = props;
 
     return (
         <div className={style.container}>
@@ -30,6 +31,7 @@ function InputBox(props: IInputBox) {
                 />
             ) : (
                 <Input
+                    name={inputName}
                     type={inputType}
                     placeholder={placeholder}
                     value={value}
