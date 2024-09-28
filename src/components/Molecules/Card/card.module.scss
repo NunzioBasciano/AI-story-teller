@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 0.5rem;
+
+    :hover {
+        cursor: pointer;
+    }
+
+    h3 {
+        color: var(--dark-orange);
+        height: 45px;
+    }
+
+    p {
+        height: 220px;
+    }
+
+}
