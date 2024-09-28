@@ -5,7 +5,8 @@ import WindowBox from '@/components/Organism/WindowBox/WindowBox';
 import styles from "@/styles/Home.module.scss";
 import Button from '@/components/Atom/Button/Button';
 import emailjs from 'emailjs-com';
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm() {
 
@@ -43,15 +44,16 @@ function ContactForm() {
             , 'Bvri3pHUOWZ5_HYqF')
             .then((result) => {
                 console.log(result.text);
-                alert("Email inviata con successo!");
+                toast.success('Email inviata con successo!');
             }, (error) => {
                 console.log(error.text);
-                alert("Errore nell'invio dell'email.");
+                toast.error("Errore nell'invio dell'email.");
             });
     };
 
     return (
         <div className={styles.content}>
+            <ToastContainer />
             <WindowBox
                 title={'Contacts'}
             >
