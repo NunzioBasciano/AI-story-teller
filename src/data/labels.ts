@@ -2,14 +2,13 @@ export const labels = {
 
 
     /* Header */
-    homeLabel: 'Home',
-    loginButtonLabel: 'Login',
+    homeLabel: 'Pagina iniziale',
     titlePageLabel: 'AI Story Teller',
     hamburgerMenuLabel: 'hamburger menu',
     generateStoryLabel: 'Generate Story',
-    yourStoriesLabel: 'Your stories',
-    contactsLabel: 'Contacts',
-    information: 'Information',
+    yourStoriesLabel: 'Le tue storie',
+    contactsLabel: 'Contatti',
+    information: 'informazioni',
 
     /* WindowBox */
     storyParamsLabel: 'Story Params',

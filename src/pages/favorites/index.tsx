@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.scss";
 import WindowBox from '@/components/Organism/WindowBox/WindowBox';
 import style from './favourites.module.scss';
 import Card from '@/components/Molecules/Card/Card';
-import Modal from '@/components/Molecules/Modal/Modal'; // Importa il componente Modal
+import Modal from '@/components/Molecules/Modal/Modal';
 import { truncateText } from '@/data/truncateText';
 
 interface IItem {
@@ -14,8 +14,9 @@ interface IItem {
 function Favorites() {
     const [favorites, setFavorites] = useState<IItem[]>([]);
     const [isOpenModal, setIsOpenModal] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<IItem | null>(null); // Stato per l'elemento selezionato
+    const [selectedItem, setSelectedItem] = useState<IItem | null>(null);
 
+    // Effect to retrieve favorites from local storage on component mount
     useEffect(() => {
         const storedFavorites = localStorage.getItem('favorites');
         if (storedFavorites) {
@@ -41,7 +42,7 @@ function Favorites() {
                         favorites.map((item, index) => (
                             <div className={styles.item} key={index}>
                                 <Card
-                                    openModal={() => handleOpenModal(item)} // Apri la modale al clic
+                                    openModal={() => handleOpenModal(item)}
                                     title={item.title}
                                     paragraphs={truncateText(item.paragraphs, 50)}
                                 />
@@ -51,7 +52,7 @@ function Favorites() {
                         <p>Nessun preferito trovato.</p>
                     )}
                 </div>
-                {isOpenModal && selectedItem && ( // Mostra la modale se aperta
+                {isOpenModal && selectedItem && (
                     <Modal
                         title={selectedItem.title}
                         paragraphs={selectedItem.paragraphs}

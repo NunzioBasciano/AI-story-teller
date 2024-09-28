@@ -9,11 +9,16 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ title, paragraphs, onClose }) => {
+
+    const paragraphArray = paragraphs.split('.').filter(paragraph => paragraph.trim() !== '');
+
     return (
         <div className={styles.overlay}>
             <div className={styles.modal}>
                 <h3>{title}</h3>
-                <p>{paragraphs}</p>
+                {paragraphArray.map((paragraph, index) => (
+                    <p key={index}>{paragraph.trim()}.</p>
+                ))}
                 <Button onClick={onClose}>Chiudi</Button>
             </div>
         </div>

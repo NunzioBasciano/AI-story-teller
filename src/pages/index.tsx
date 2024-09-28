@@ -224,7 +224,7 @@ export default function Home() {
         <ToastContainer />
 
         <WindowBox title={labels.storyParamsLabel}>
-          {/* Sezione input per protagonista, antagonista e genere */}
+          {/* input section */}
           <div className={styles.input_container}>
             <InputBox
               label={labels.protagonistLabel}
@@ -245,7 +245,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Sezione switch per PEGI 18 e bottone per generare */}
+          {/*  switch section */}
           <div className={styles.container_switchButton}>
             <SwitchBox
               label={labels.childOrAdultLabel}
@@ -260,11 +260,11 @@ export default function Home() {
             <Button
               label={'Salva Storia'}
               onClick={handleSaveStory}
-              disabled={!response} // Disabilita il pulsante se non c'è risposta
+              disabled={!response}
             />
           </div>
 
-          {/* Rendering della storia generata */}
+          {/* story section*/}
           {isLoading && <div className={styles.loading}>Il risultato è in caricamento</div>}
           {!isLoading && response && (
             <div className={styles.container_story}>
@@ -283,7 +283,7 @@ export default function Home() {
             </div>
           )}
 
-          {/* Sezione per rispondere alle domande */}
+          {/* question section */}
           {response && (
             <form className={styles.formQuestion} onSubmit={handleAnswer}>
               {Object.keys(input).map((key, index) => (
@@ -299,7 +299,7 @@ export default function Home() {
             </form>
           )}
 
-          {/* Rendering della valutazione delle risposte */}
+          {/* Answer section */}
           {answer && (
             <div className={styles.container_story}>
               <h2>Valutazione delle risposte:</h2>

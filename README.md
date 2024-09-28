@@ -1,11 +1,15 @@
 # AI Story Teller
 
-AI Story Teller è un'applicazione web che utilizza l'intelligenza artificiale per generare storie coinvolgenti. L'utente può inserire parole chiave, scegliere il genere della storia e ottenere racconti unici e creativi in pochi istanti.
+AI Story Teller è un'applicazione web che utilizza l'intelligenza artificiale per generare storie coinvolgenti. L'utente può inserire parole chiave, scegliere il genere della storia, specificare se la storia è per adulti o bambini e ottenere racconti unici e creativi in pochi istanti. L'applicazione offre anche una funzionalità di sintesi vocale e un sistema di domande di comprensione per verificare le risposte degli utenti.
 
 
 ### Caratteristiche
 
 - **Generazione di Storie**: Inserisci parole chiave e seleziona il genere per generare storie personalizzate.
+- **Scelta dell'Età**: L'utente può scegliere se la storia generata è per adulti o bambini.
+- **Domande di Comprensione**: Dopo la generazione della storia, l'utente può rispondere a domande di comprensione del testo.
+- **Verifica delle Risposte**: Le risposte degli utenti vengono verificate utilizzando l'analisi di Gemini.
+- **Sintesi Vocale**: La storia può essere letta ad alta voce grazie alla sintesi vocale.
 - **Interfaccia Intuitiva**: Un design semplice e pulito che rende facile l'interazione con l'app.
 - **Salvataggio Storie**: Gli utenti possono salvare le storie generate per un uso futuro.
 
@@ -76,6 +80,9 @@ L'applicazione utilizza l'API route /api/generate.ts per comunicare con l'API di
 * Riproduci: Legge ad alta voce la storia generata utilizzando la funzione di sintesi vocale del browser.
 * Stop: Ferma la riproduzione della sintesi vocale.
 
+### Domande di Comprensione
+
+Dopo la generazione della storia, l'utente riceve domande di comprensione del testo. Le risposte degli utenti vengono inviate all'API di Google Gemini per verificare la loro accuratezza. Questa funzionalità consente agli utenti di testare la loro comprensione e ricevere un feedback immediato.
 
 ## API Route
 

@@ -2,7 +2,6 @@ import style from './label.module.scss'
 
 export interface ILabelProps {
     label: string;
-
 }
 
 function Label(props: ILabelProps) {

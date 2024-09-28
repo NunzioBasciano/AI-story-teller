@@ -10,10 +10,13 @@ interface ICard {
 function Card(props: ICard) {
     const { title, paragraphs, openModal } = props;
 
+    const paragraphArray = paragraphs.split('.').filter(paragraph => paragraph.trim() !== '');
     return (
-        <div className={styles.container} onClick={openModal}> {/* Aggiungi onClick qui */}
+        <div className={styles.container} onClick={openModal}>
             <h3>{title}</h3>
-            <p>{paragraphs}</p>
+            {paragraphArray.map((paragraph, index) => (
+                <p key={index}>{paragraph.trim()}.</p>
+            ))}
         </div>
     );
 }
