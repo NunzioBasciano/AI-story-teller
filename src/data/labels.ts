@@ -5,31 +5,31 @@ export const labels = {
     homeLabel: 'Pagina iniziale',
     titlePageLabel: 'AI Story Teller',
     hamburgerMenuLabel: 'hamburger menu',
-    generateStoryLabel: 'Generate Story',
+    generateStoryLabel: 'Genera storia',
     yourStoriesLabel: 'Le tue storie',
     contactsLabel: 'Contatti',
     information: 'informazioni',
 
     /* WindowBox */
-    storyParamsLabel: 'Story Params',
+    storyParamsLabel: 'I parametri della storia',
 
 
     /* InputBox */
-    protagonistLabel: "Protagonist's name",
-    setProtagonistLabel: "Insert protagonist's name",
+    protagonistLabel: "Nome del protagonista",
+    setProtagonistLabel: "Inserisci il nome del protagonista",
 
-    antagonistLabel: "Antagonist's name",
-    setAntagonistLabelLabel: "Insert antagonist's name",
+    antagonistLabel: "Nome del antagonsita",
+    setAntagonistLabelLabel: "Inserisci il nome dell'antagonista",
 
-    genresLabel: 'Genres',
+    genresLabel: 'Generi',
 
-    buttonParamsLabel: 'Generate',
+    buttonParamsLabel: 'Genera',
 
     /* SelectBox */
-    selectLabel: 'Select genre',
+    selectLabel: 'Seleziona genere',
 
     /* SwitchBox */
-    childOrAdultLabel: 'Child or Adult',
+    childOrAdultLabel: 'bambini o adulti',
 
     /* Footer */
     copyrightLabel: '©2024 Nunzio Basciano',

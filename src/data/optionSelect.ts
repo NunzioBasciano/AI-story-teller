@@ -8,19 +8,19 @@ export const optionSelect = [
         "value": "fantasy"
     },
     {
-        "label": "Adventure",
+        "label": "Avventura",
         "value": "adventure"
     },
     {
-        "label": "Romantic",
+        "label": "Romantico",
         "value": "romantic"
     },
     {
-        "label": "Science Fiction",
+        "label": "Fantascienza",
         "value": "science-fiction"
     },
     {
-        "label": "Mystery",
+        "label": "Mistero",
         "value": "mystery"
     }
 ]

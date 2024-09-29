@@ -22,37 +22,10 @@ AI Story Teller è un'applicazione web che utilizza l'intelligenza artificiale p
 * Librerie: @google/generative-ai
 
 
-### Installazione
+### Link Vercel
 
-1. Clona il repository:
+https://ai-story-teller-ecru.vercel.app/
 
-```bash
-git clone https://github.com/NunzioBasciano/ai-story-teller.git
-```
-
-2. Naviga nella cartella del progetto:
-
-```bash
-cd ai-story-teller
-```
-
-3. Installa le dipendenze:
-
-```bash
-npm install
-```
-
-4. Configura il tuo ambiente: Crea un file .env.local e aggiungi le variabili ambientali necessarie, ad esempio:
-
-```bash
-GEMINI_API_KEY=your_gemini_api_key
-```
- 
-5. Avvia il server di sviluppo:
-
-```bash
-npm run dev
-```
 
 ### Utilizzo
 

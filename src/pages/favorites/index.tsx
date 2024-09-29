@@ -36,7 +36,7 @@ function Favorites() {
 
     return (
         <div className={styles.content}>
-            <WindowBox title={'Favourites'}>
+            <WindowBox title={'Preferiti'}>
                 <div className={style.list}>
                     {!isOpenModal && !selectedItem && favorites.length > 0 ? (
                         favorites.map((item, index) => (

@@ -61,7 +61,7 @@ function ContactForm() {
         <div className={styles.content}>
             <ToastContainer />
             <WindowBox
-                title={'Contacts'}
+                title={'Contatti'}
             >
                 <form className={style.form} onSubmit={handleSubmit}>
                     <div className={style.nameSection}>
