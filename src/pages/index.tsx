@@ -199,7 +199,7 @@ export default function Home() {
 
     localStorage.setItem('favorites', JSON.stringify(favoritesArray));
     setSavedStory(storyToSave.title);
-    toast.success('Storia salvata nel local storage!');
+    toast.success('Storia salvata!');
   };
 
 
